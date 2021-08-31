@@ -1,0 +1,1040 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+}
+
+:root {
+    --violet-color: #9873FF;
+    --grey-color: #B0B0B0;
+    --fon-color: #C8C5D1;
+    --main-color: #333333
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #E5E5E5;
+    font-family:'Open Sans';
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+/*header*/
+.header {
+    height: 90px;
+    padding: 23px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 9.03012px 27.0904px rgba(176, 190, 197, 0.32), 0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32);
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    margin-right: 53px;
+    transition: all 0.3s linear;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.search-input {
+    width: 581px;
+    height: 44px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 0%;
+    padding: 12px 16px;
+}
+
+.search-input::placeholder {
+    color: var(--grey-color);
+}
+
+
+/*body*/
+.container {
+    background-color: #E5E5E5;
+    width: 1186px;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: #333333;
+}
+
+.main-heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+
+.table td,
+.table th {
+    
+    border: none;
+    border-bottom: 1px solid var(--fon-color);
+}
+
+.table th {
+    padding: 8px 5px;
+}
+
+.table td {
+    height: 60px;
+    padding-left: 8px;
+   
+}
+
+.table-cell {
+    background-color: #fff;
+    font-size: 14px;
+    color: var(--main-color);
+}
+
+th {
+    padding: 8px 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey-color);
+    text-align: left;
+}
+
+th:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+th:active {
+    color: var(--violet-color);
+}
+
+.cell-contacts:hover,
+.cell-actions:hover {
+    cursor: unset;
+    color: var(--grey-color);
+}
+
+.ascending,
+.descending
+ {
+   color: var(--violet-color);
+}
+
+.table-header-content {
+    position: relative;
+}
+
+.ascending > .table-header-content::before,
+.descending > .table-header-content::before
+ {
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: -13px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-size: contain;
+}
+
+.ascending > .table-header-content::before {
+    background-image: url(../img/asc-arrow.svg);
+}
+
+.descending > .table-header-content::before {
+    background-image: url(../img/desc-arrow.svg);
+}
+
+.asc-alphabet> .table-header-content::after,
+.desc-alphabet> .table-header-content::after
+ {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -35px;
+    width: 20px;
+    height: 14px;
+}
+
+.asc-alphabet> .table-header-content::after {
+    content: 'А-Я';
+}
+
+.desc-alphabet> .table-header-content::after {
+    content: 'Я-А';
+}
+
+.table-cell-id {
+    width: 10%;
+    color: var(--grey-color);
+    font-size: 12px;
+}
+
+.cell-surname {
+    width: 27%;
+}
+
+.cell-created {
+    width: 13%;
+}
+
+.cell-updated {
+    width: 13%;
+}
+
+.cell-contacts {
+    width: 15%;
+}
+
+.cell-actions {
+    width: 22%;
+}
+
+.table-cell a{
+    text-decoration: none;
+    transition: color 0.3s linear;
+    color: var(--main-color);
+}
+
+.table-cell a:hover{
+    color: var(--violet-color);
+}
+
+.table-cell a:active {
+    color: #8052FF;
+}
+
+.client-timeinfo {
+    color: var(--grey-color);
+}
+
+.client-dateinfo {
+    margin-right: 7px;
+}
+
+.btn-change{
+    margin-right: 35px;
+}
+
+.btn-change,
+.btn-delete {
+    position: relative;
+    width: 83px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    padding-left: 14px;
+}
+
+.btn-change::before,
+.btn-delete:before
+ {
+    display: block;
+    position: absolute;
+    top:3px;
+    left:0;
+    width: 12px;
+    height: 12px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-change::before {
+    background-image: url(../img/edit.svg);
+}
+.btn-delete:before {
+    background-image: url(../img/cancel.svg);
+}
+
+.btn-change:hover {
+    cursor:pointer;
+    color: var(--violet-color);
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    color: #F06A4D;
+}
+
+.btn-load::before {
+    display: none;
+}
+
+.spinner-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 200;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -36px 0 0 -36px;
+    width: 72px;
+    height: 72px;
+}
+
+.search-spinner {
+    position: absolute;
+    top: 55px;
+    left: 650px;
+    margin: -12px 0 0 -12px;
+    width: 25px;
+    height: 25px;
+   
+}
+
+.btn-spinner {
+    position: absolute;
+    top:10px;
+    left:6px;
+    width: 20px;
+    height: 20px;
+    margin: -12px 0 0 -12px;
+}
+
+.save-btn-spinner {
+    position: relative;
+    bottom: 27px;
+    left: 175px;
+    width: 20px;
+    height: 20px;
+    margin: -12px 0 0 -12px;
+   
+}
+
+.save-btn-spinner .path {
+    stroke: #fff;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table-cell {
+    border: 1px solid black;
+    padding: 5px 0;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    overflow: scroll;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    padding: 30px;
+    color: #333333;
+    margin-left: 16px;
+}
+
+.modal-heading {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 9px;
+}
+
+.id-span {
+    color: var(--grey-color);
+    font-size: 12px;
+    position: relative;
+    top: 3px;
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    padding: 24px 0 50px 0;
+    width: 450px;
+    background-color: #fff;
+    top: 100px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animatetop;
+    animation-duration: 0.8s;
+    
+}
+
+.name-fieldset {
+    border: none;
+    padding: 0 30px 26px 30px;
+}
+
+.modal-label {
+    display: block;
+    color: var(--grey-color);
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.modal-input {
+    padding-bottom: 4px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--fon-color);
+    padding-bottom: 4px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-bottom: 1px solid #F06A4D;
+}
+
+.modal-input::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+    color: #B0B0B0;
+}
+
+.cancel-btn {
+    width: 45px;
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #333333;
+    transition: all 0.3s linear;
+}
+
+.cancel-btn:hover {
+    cursor: pointer;
+    color: var(--violet-color);
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 100px;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 100px;
+        opacity: 1
+    }
+}
+
+.modal-wrapper {
+    display: flex;
+    padding: 10px 0 15px 30px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 21px;
+    right:21px;
+    padding: 0;
+    width: 21px;
+    height: 21px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    transition: all 0.3s linear;
+}
+
+.close-btn:hover {
+    cursor:pointer;
+    transform: scale(1.2);
+}
+
+.modal-contacts-wrapper {
+    background-color: rgba(200, 197, 209, 0.2);
+    margin-bottom: 8px;
+    padding: 8px 0;
+}
+
+.modal-contacts {
+    border: none;
+    padding: 0 30px;
+}
+
+.contact-select {
+    padding: 10px 15px 10px 12px;
+    background-color: #E7E5EB;
+    border: 1px solid var(--fon-color);
+    font-size: 12px;
+    font-weight: 400;
+    appearance: none;
+    width: 123px;
+}
+
+.contact-wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.contact-wrapper::after {
+    display: block;
+    width: 9px;
+    height: 9px;
+    content: '';
+    position: absolute;
+    top:40%;
+    left:22%;
+    background: url('../img/contact-arrow.svg') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    transition: all 0.3s linear;
+}
+
+.select-open::after {
+    transform: rotate(180deg) translateY(50%);
+}
+
+.contact-input {
+width: calc(100% - 150px);
+padding: 8px 0 9px 12px;
+border: 1px solid #C8C5D1;
+transition: all 0.3s linear;
+
+}
+
+.contact-input:focus {
+    outline: none;
+    border-bottom: 1px solid #F06A4D;
+}
+
+.clear-btn {
+    width: 27px;
+    height: 37px;
+    background-image: url(../img/cancel-grey.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: center center;
+    background-color:#E7E5EB;
+    border: 1px solid #C8C5D1;
+    transition: all 0.3s linear ;
+}
+
+.clear-btn:hover {
+    background-image: url(../img/cancel.svg);
+    border: 1px solid #F06A4D;
+}
+
+.save-btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 12px 35px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    background-color: var(--violet-color);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.save-btn:hover {
+    background-color:#B89EFF;
+}
+
+.save-btn:active {
+    background-color:#8052FF;
+}
+
+.delete-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: #333333;
+    text-decoration: underline;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.delete-btn:hover {
+    color: var(--violet-color)
+}
+
+.delete-btn:active {
+    color: #8052FF
+}
+
+.contact-input::placeholder {
+    font-size: 14px;
+    }
+
+    .contact-select > option {
+        display: block;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.error {
+    padding: 8px 97px 9px 97px;
+    font-size: 10px;
+    line-height: 13px;
+    color: #F06A4D;
+    text-align: center;
+}
+
+.error-field {
+    border-bottom: 1px solid #F06A4D;
+    
+}
+
+
+.add-btn {
+    margin: 0 auto;
+    display: block;
+    color: var(--violet-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    padding: 12.5px 26.5px 12.5px 58.5px;
+    background-color: transparent;
+    border-radius: 0%;
+    border: 1px solid var(--violet-color);
+    background-image: url(../img/add-clint-btn.svg);
+    background-repeat: no-repeat;
+    background-size: 22px 16px;
+    background-position: 12.5px center;
+    transition: all 0.3s linear;
+    margin-bottom: 50px;
+}
+
+.add-btn:hover {
+    color: #fff;
+    background-color: #B89EFF;
+    background-image: url(../img/add-btn-hover.svg);
+}
+
+.add-btn:active {
+    background-color: #8052FF;
+
+}
+
+.add-contact-btn {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 0 8px 19px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #333333;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    transition: all 0.3s linear;
+
+}
+
+.add-contact-btn::before {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top:25%;
+    left:0;
+    content: '+';
+    text-align: center;
+    width: 13px;
+    height: 13px;
+    color: var(--violet-color);
+    font-size: 15px;
+    line-height: 12px;
+    font-weight: 400;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--violet-color);
+    transition: all 0.3s linear;
+}
+
+.add-contact-btn:hover {
+    color: var(--violet-color);
+}
+
+.add-contact-btn:hover::before  {
+    color: #fff;
+    background-color: var(--violet-color);
+}
+
+.add-contact-btn:active {
+    color: #8052FF;
+}
+.add-contact-btn:active::before  {
+    color: #fff;
+    background-color: #8052FF;
+}
+
+.contacts-content {
+    display: none;
+    width: 133px;
+    position: absolute;
+    bottom: 30px;
+    left: -55px;
+    padding: 8px 0;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.contacts-content::after {
+    content: ''; 
+    position: absolute;
+    left: 42%; bottom: -14px;
+    border: 7px solid transparent;
+    border-top: 7px solid var(--main-color);
+}
+
+.contacts-content:hover {
+    color: var(--violet-color);
+    text-decoration: underline;
+}
+
+[data-type]
+ {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+[data-type]:nth-child(n+5) {
+    display: none;
+}
+
+[data-type]::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+}
+
+[data-type="Телефон"]::before, [data-type="Доп.телефон"]::before {
+    background-image: url(../img/phone.svg);
+}
+
+[data-type="Vk"]::before {
+    background-image: url(../img/vk.svg);
+}
+
+[data-type="Facebook"]::before {
+    background-image: url(../img/fb.svg);
+}
+
+[data-type="Email"]::before {
+    background-image: url(../img/mail.svg);
+}
+
+[data-type="Другое"]::before {
+    background-image: url(../img/other.svg);
+}
+
+.more-btn {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--violet-color);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 8px;
+    font-weight: 600;
+    background-color: #fff;
+}
+
+.visible {
+    display: block;
+}
+
+.btn-delete-spinner > .path {
+    stroke: #F06A4D;
+}
+
+.path {
+    stroke: #9873FF;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+.list-ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-ul li {
+    padding-left: 15px;
+}
+
+.autocomplete-link {
+    color: var(--grey-color);
+    transition: all 0.3s linear;
+}
+
+.autocomplete-link:hover {
+    cursor: pointer;
+    color: var(--violet-color);
+}
+
+
+
+li.selected {background:var(--violet-color)}
+
+.autocomplete-list {
+    position: absolute;
+    width: 581px;
+    top:75px;
+    left: 125px;
+    background-color: #fff;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.autocomplete-link {
+    display: block;
+}
+
+
+.selected-row > .table-cell{background-color: lightcyan}
+
+/*delete-modal*/
+.delete-modal {
+    position: fixed;
+    top: 100px;
+    left: calc((100% - 450px)/2);
+    padding: 22px 88px;
+    width: 450px;
+    background-color: #fff;
+}
+
+.delete-modal-heading {
+    text-align: center;
+    margin-bottom: 11px;
+}
+
+.modal-text 
+{
+    margin-bottom: 25px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+}
+
+
+@media(max-width:1400px) {
+    .container {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+}
+
+@media(max-width:1023px) {
+    .table-cell-id {
+        width: 10%;
+        color: var(--grey-color);
+        font-size: 12px;
+    }
+    
+    .cell-surname {
+        width: 29%;
+    }
+    
+    .cell-created {
+        width: 13%;
+    }
+    
+    .cell-updated {
+        width: 13%;
+    }
+    
+    .cell-contacts {
+        width: 29%;
+    }
+    
+    .cell-actions {
+        width: 6%;
+    }
+
+    .btn-change {
+        margin-right: 0;
+    }
+
+    .more-btn {
+        bottom: 3px;
+    }
+
+    .client-dateinfo {
+        margin-right: 0;
+    }
+
+    .client-timeinfo {
+        display:block;
+    }
+
+    .table th {
+        padding: 8px 10px;
+    }
+    [data-type]
+ {
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+}
+
+@media(max-width:768px) {
+
+    .header {
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .search-form {
+        display: none;
+    }
+
+    .logo {
+        margin: 0;
+        width: 24px;
+        height: 24px;
+    }    
+
+    .logo-img {
+        width: 24px;
+        height: 24px;  
+    }
+
+    .table-wrapper{
+        overflow-x: scroll;
+    }
+
+    .table {
+        width: 728px;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal-wrapper {
+        padding: 10px 0 15px 15px;
+    }
+
+    .name-fieldset {
+       padding: 0 15px 26px 15px;
+    }
+
+    .modal-contacts {
+        padding: 0 15px;
+    }
+    .contact-select {
+        width: 110px
+}
+    .contact-input {
+        width: calc(100% - 137px);
+        padding: 8px 0 9px 15px;
+}
+.contact-wrapper::after {
+    left:33%;
+}
+}
